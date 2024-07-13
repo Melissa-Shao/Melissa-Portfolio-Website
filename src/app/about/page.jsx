@@ -105,11 +105,11 @@ const Aboutpage = () => {
           </div>
 
           {/* experience container */}
-          <div className="flex flex-col gap-12 justify-center pb-48">
+          <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
             {/* experience title */}
-            <h1 className="font-bold text-2xl">experience</h1>
+            <motion.h1 initial={{ x: "-300px" }} animate={isExperienceInView ? { x: 0 } : {}} transition={{ delay: 0.2 }} className="font-bold text-2xl">EXPERIENCE</motion.h1>
             {/* experience lists */}
-            <div className="">
+            <motion.div initial={{ x: "-300px" }} animate={isExperienceInView ? { x: 0 } : {}} className="">
 
               {/* experience list item */}
               <div className="flex justify-between h-48">
@@ -180,7 +180,7 @@ const Aboutpage = () => {
                 </div>
               </div>
 
-            </div>
+            </motion.div>
           </div>
         </div>
 
