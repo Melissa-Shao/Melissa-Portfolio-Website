@@ -40,7 +40,7 @@ const Aboutpage = () => {
               </svg>
             </div>
             {/* scroll svg */}
-            <svg
+            <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
@@ -61,7 +61,7 @@ const Aboutpage = () => {
                 stroke="#000000"
                 strokeWidth="1"
               ></path>
-            </svg>
+            </motion.svg>
           </div>
 
           {/* skills container */}
@@ -80,7 +80,7 @@ const Aboutpage = () => {
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
             </motion.div>
             {/* skills scroll svg */}
-            <svg
+            <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
@@ -101,7 +101,7 @@ const Aboutpage = () => {
                 stroke="#000000"
                 strokeWidth="1"
               ></path>
-            </svg>
+            </motion.svg>
           </div>
 
           {/* experience container */}
