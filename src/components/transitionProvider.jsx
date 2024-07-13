@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
+  const pageTitle = pathName === '/' ? 'Home' : pathName.substring(1).charAt(0).toUpperCase() + pathName.substring(1).slice(1).toLowerCase();
 
   return (
     <AnimatePresence mode="wait">
@@ -26,7 +27,7 @@ const TransitionProvider = ({ children }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {pathName.substring(1).charAt(0).toUpperCase() + pathName.substring(1).slice(1).toLowerCase()}
+          {pageTitle}
         </motion.div>
 
         <motion.div
