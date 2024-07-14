@@ -1,12 +1,35 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contactpage = () => {
   const text = 'Say Hello';
 
-  const [success, setSuccess] = useState(true);
-  const [error, setError] = useState(true);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setError(false);
+    setSuccess(false);
+
+    emailjs
+      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      })
+      .then(
+        (result) => {
+          setSuccess(true);
+          form.current.reset();
+        },
+        (error) => {
+          setError(true);
+        },
+      );
+  };
 
   return (
     <motion.div className="h-full"
@@ -25,12 +48,14 @@ const Contactpage = () => {
         </div>
 
         {/* form container */}
-        <form action="" className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-4 justify-center p-4 md:p-8 lg:p-16">
+        <form
+          onSubmit={sendEmail}
+          ref={form} action="" className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-4 justify-center p-4 md:p-8 lg:p-16">
           <span>Dear Melissa,</span>
           <textarea rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none" />
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none" name="userMessage" />
           <span>My email address is:</span>
-          <input type="text" className="bg-transparent border-b-2 border-b-black outline-none" />
+          <input name="userEmail" type="text" className="bg-transparent border-b-2 border-b-black outline-none" />
           <span>Regards</span>
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-2">Send</button>
           {success && <span className="text-green-300 font-semibold">Message sent successfully!</span>}
