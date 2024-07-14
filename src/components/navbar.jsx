@@ -82,10 +82,10 @@ const Navbar = () => {
 
       {/*social media*/}
       <div className='hidden md:flex gap-4 w-1/3'>
-        <Link href="#/">
+        <Link href="https://github.com/Melissa-Shao" target="_blank" rel="noopener noreferrer">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/meilu-shao-347062305" target="_blank" rel="noopener noreferrer">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>
