@@ -6,7 +6,6 @@ import { useRef } from "react";
 const Aboutpage = () => {
   const containerRef = useRef();
   const { scrollYProgress } = useScroll({ container: containerRef });
-  // console.log(scrollYProgress);
 
   const skillRef = useRef();
   const isSkillInView = useInView(skillRef, { margin: '100px' });
@@ -30,9 +29,13 @@ const Aboutpage = () => {
           <div className="flex flex-col gap-12 justify-center">
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* biography description */}
-            <p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, error, consectetur voluptatum tempore officia repudiandae beatae provident, consequuntur eius asperiores nobis est eveniet ipsa totam at quod porro possimus facere.</p>
+            <div className="text-lg">
+              <p className="pb-2">My name is Melissa. Currently, I am a full-time student in the Computer Systems Technology program at BCIT. Previously, I worked in the financial field for over eight years, during which I honed my skills in leadership, client service and data analysis.</p>
+              <p>I love critical thinking and solving complex problems. The challenge of analyzing issues, breaking them down into manageable parts, and finding innovative solutions is deeply satisfying to me.I also enjoy testing and debugging, as my meticulous nature ensures thorough and accurate results.</p>
+            </div>
+
             {/* biography quote */}
-            <span className="italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, repellendus.</span>
+            <span className="italic">The only way to do great work is to love what you do.</span>
             {/* sign */}
             <div className="self-end">
               <svg width="185" height="77" viewBox="0 0 370 114" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,13 +74,22 @@ const Aboutpage = () => {
             {/* skills list */}
             <motion.div initial={{ x: '-300px' }} animate={isSkillInView ? { x: 0 } : {}} className=" flex gap-4 flex-wrap">
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Python</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">SQL</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Java</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Firebase</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">MongoDB</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">React.js</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Express.js</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Next.js</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Node.js</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Tailwind CSS</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Framer Motion</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Git</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Bash</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Figma</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Trello</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Lucidchart</div>
             </motion.div>
             {/* skills scroll svg */}
             <motion.svg
@@ -115,10 +127,14 @@ const Aboutpage = () => {
               <div className="flex justify-between h-48">
                 {/* left */}
                 <div className="w-1/3 ">
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Senior JavaScript Engineer</div>
-                  <div className="p-3 text-sm italic">job desc</div>
-                  <div className="p-3 text-red-400 text-sm font-semibold">2024-present</div>
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">company Apple</div>
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Financial Analyst/Advisor</div>
+                  <div className="p-3 text-sm italic">
+                    <p>
+                      Analyzed financial products, delivered financial advice, developed and maintained databases.
+                    </p>
+                  </div>
+                  <div className="p-3 text-red-400 text-sm font-semibold">Jul 2016 - Jul 2021</div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
                 </div>
                 {/* center */}
                 <div className="w-1/6 flex justify-center">
@@ -150,10 +166,10 @@ const Aboutpage = () => {
                 </div>
                 {/* right */}
                 <div className="w-1/3 ">
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Senior JavaScript Engineer</div>
-                  <div className="p-3 text-sm italic">job desc</div>
-                  <div className="p-3 text-red-400 text-sm font-semibold">2024-present</div>
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">company Apple</div>
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Branch/Lobby Manager</div>
+                  <div className="p-3 text-sm italic">Implemented data-driven strategies, implemented data-driven strategies and spearheaded a data system.</div>
+                  <div className="p-3 text-red-400 text-sm font-semibold"> Jan 2014 - Jul 2016</div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
                 </div>
               </div>
 
@@ -161,10 +177,10 @@ const Aboutpage = () => {
               <div className="flex justify-between h-48">
                 {/* left */}
                 <div className="w-1/3 ">
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Senior JavaScript Engineer</div>
-                  <div className="p-3 text-sm italic">job desc</div>
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Bank Clerk/Teller</div>
+                  <div className="p-3 text-sm italic">Utilized data analysis techniques, leveraged data insights and implemented data-driven solutions.</div>
                   <div className="p-3 text-red-400 text-sm font-semibold">2024-present</div>
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">company Apple</div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
                 </div>
                 {/* center */}
                 <div className="w-1/6 flex justify-center">
