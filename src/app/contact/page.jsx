@@ -58,8 +58,8 @@ const Contactpage = () => {
           <input name="userEmail" type="text" className="bg-transparent border-b-2 border-b-black outline-none" />
           <span>Regards</span>
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-2">Send</button>
-          {success && <span className="text-green-300 font-semibold">Message sent successfully!</span>}
-          {error && <span className="text-red-300 font-semibold">Message failed to send!</span>}
+          {success && <span className="text-green-300 font-semibold text-center text-xl">Message sent successfully!</span>}
+          {error && <span className="text-red-300 font-semibold text-center text-xl">Message failed to send!</span>}
         </form>
 
       </div>
