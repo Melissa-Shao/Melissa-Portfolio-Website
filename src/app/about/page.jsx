@@ -27,7 +27,7 @@ const Aboutpage = () => {
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:1/2">
           {/* biography container */}
           <div className="flex flex-col gap-12 justify-center">
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-bold text-2xl">ABOUT ME</h1>
             {/* biography description */}
             <div className="text-lg">
               <p className="pb-2">My name is Melissa. Currently, I am a full-time student in the Computer Systems Technology program at BCIT. Previously, I worked in the financial field for over eight years, during which I honed my skills in leadership, client service and data analysis.</p>
@@ -127,11 +127,33 @@ const Aboutpage = () => {
               <div className="flex justify-between h-48">
                 {/* left */}
                 <div className="w-1/3 ">
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Financial Analyst/Advisor</div>
+                </div>
+                {/* center */}
+                <div className="w-1/6 flex justify-center">
+                  {/* line */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* circle */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
+                    </div>
+                  </div>
+                </div>
+                {/* right */}
+                <div className="w-1/3 flex flex-col md:gap-0 lg:gap-0">
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Volunteer NewToBC Library Champion</div>
+                  <div className="p-3 text-sm italic">Provided library resources, built community connections, supported integration by offering advice and tips.</div>
+                  <div className="p-3 text-red-400 text-sm font-semibold"> Sep 2023 - Dec 2023
+                  </div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">NewToBC</div>
+                </div>
+              </div>
+
+              {/* experience list item */}
+              <div className="flex justify-between h-48">
+                {/* left */}
+                <div className="w-1/3 flex flex-col md:gap-0 lg:gap-0">
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Financial Analyst</div>
                   <div className="p-3 text-sm italic">
-                    <p>
-                      Analyzed financial products, delivered financial advice, developed and maintained databases.
-                    </p>
+                    Analyzed financial products, delivered financial advice, developed and maintained databases.
                   </div>
                   <div className="p-3 text-red-400 text-sm font-semibold">Jul 2016 - Jul 2021</div>
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
@@ -165,8 +187,8 @@ const Aboutpage = () => {
                   </div>
                 </div>
                 {/* right */}
-                <div className="w-1/3 ">
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Branch/Lobby Manager</div>
+                <div className="w-1/3 flex flex-col md:gap-0 lg:gap-0">
+                  <div className="bg-white p-3 mt-40 md:mt-0 lg:mt-0 font-semibold rounded-b-lg rounded-s-lg">Lobby Manager</div>
                   <div className="p-3 text-sm italic">Implemented data-driven strategies, implemented data-driven strategies and spearheaded a data system.</div>
                   <div className="p-3 text-red-400 text-sm font-semibold"> Jan 2014 - Jul 2016</div>
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
@@ -176,8 +198,8 @@ const Aboutpage = () => {
               {/* experience list item */}
               <div className="flex justify-between h-48">
                 {/* left */}
-                <div className="w-1/3 ">
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Bank Clerk/Teller</div>
+                <div className="w-1/3 flex flex-col md:gap-0 lg:gap-0">
+                  <div className="bg-white p-3 mt-36 md:mt-0 lg:mt-0 font-semibold rounded-b-lg rounded-s-lg">Bank Clerk/Teller</div>
                   <div className="p-3 text-sm italic">Utilized data analysis techniques, leveraged data insights and implemented data-driven solutions.</div>
                   <div className="p-3 text-red-400 text-sm font-semibold">2024-present</div>
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
