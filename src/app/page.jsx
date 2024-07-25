@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Homepage = () => {
+  const fileUrl = '/Melissa_Shao_Resume.pdf';
 
   return (
     <motion.div className="h-full"
@@ -28,9 +29,11 @@ const Homepage = () => {
             <Link href="/portfolio">
               <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">View my work</button>
             </Link>
-            <Link href="/contact">
-              <button className="p-4 rounded-lg ring-1 ring-black ">Contact Me</button>
-            </Link>
+            <a href={fileUrl} target="_blank" rel="noopener noreferrer">
+              <button className="p-4 rounded-lg ring-1 ring-black flex flex-row justify-between items-center">
+                See My Resume
+              </button>
+            </a>
           </div>
         </div>
       </div>
