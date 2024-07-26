@@ -120,8 +120,34 @@ const Aboutpage = () => {
           <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
             {/* experience title */}
             <motion.h1 initial={{ x: "-300px" }} animate={isExperienceInView ? { x: 0 } : {}} transition={{ delay: 0.2 }} className="font-bold text-2xl">EXPERIENCE</motion.h1>
+
+            {/* largescreen */}
             {/* experience lists */}
-            <motion.div initial={{ x: "-300px" }} animate={isExperienceInView ? { x: 0 } : {}} className="">
+            <motion.div initial={{ x: "-300px" }} animate={isExperienceInView ? { x: 0 } : {}} className="hidden md:block lg:block xl:block">
+
+              {/* experience list item */}
+              <div className="flex justify-between h-48">
+                {/* left */}
+                <div className="w-1/3">
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Library Champion Volunteer</div>
+                  <div className="p-3 text-sm italic">Provided library resources, built community connections, supported integration by offering advice and tips.</div>
+                  <div className="p-3 text-red-400 text-sm font-semibold"> Sep 2023 - Dec 2023
+                  </div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">NewToBC</div>
+                </div>
+                {/* center */}
+                <div className="w-1/6 flex justify-center">
+                  {/* line */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* circle */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
+                    </div>
+                  </div>
+                </div>
+                {/* right */}
+                <div className="w-1/3 ">
+                </div>
+              </div>
 
               {/* experience list item */}
               <div className="flex justify-between h-48">
@@ -138,19 +164,7 @@ const Aboutpage = () => {
                   </div>
                 </div>
                 {/* right */}
-                <div className="w-1/3 flex flex-col md:gap-0 lg:gap-0">
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Volunteer NewToBC Library Champion</div>
-                  <div className="p-3 text-sm italic">Provided library resources, built community connections, supported integration by offering advice and tips.</div>
-                  <div className="p-3 text-red-400 text-sm font-semibold"> Sep 2023 - Dec 2023
-                  </div>
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">NewToBC</div>
-                </div>
-              </div>
-
-              {/* experience list item */}
-              <div className="flex justify-between h-48">
-                {/* left */}
-                <div className="w-1/3 flex flex-col md:gap-0 lg:gap-0">
+                <div className="w-1/3">
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Financial Analyst</div>
                   <div className="p-3 text-sm italic">
                     Analyzed financial products, delivered financial advice, developed and maintained databases.
@@ -158,52 +172,17 @@ const Aboutpage = () => {
                   <div className="p-3 text-red-400 text-sm font-semibold">Jul 2016 - Jul 2021</div>
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
                 </div>
-                {/* center */}
-                <div className="w-1/6 flex justify-center">
-                  {/* line */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    {/* circle */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
-                    </div>
-                  </div>
-                </div>
-                {/* right */}
-                <div className="w-1/3 ">
-                </div>
               </div>
 
               {/* experience list item */}
               <div className="flex justify-between h-48">
                 {/* left */}
-                <div className="w-1/3 ">
-                </div>
-                {/* center */}
-                <div className="w-1/6 flex justify-center">
-                  {/* line */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    {/* circle */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
-                    </div>
-                  </div>
-                </div>
-                {/* right */}
-                <div className="w-1/3 flex flex-col md:gap-0 lg:gap-0">
+                <div className="w-1/3">
                   <div className="bg-white p-3 mt-40 md:mt-0 lg:mt-0 font-semibold rounded-b-lg rounded-s-lg">Lobby Manager</div>
                   <div className="p-3 text-sm italic">Implemented data-driven strategies, implemented data-driven strategies and spearheaded a data system.</div>
                   <div className="p-3 text-red-400 text-sm font-semibold"> Jan 2014 - Jul 2016</div>
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
                 </div>
-              </div>
-
-              {/* experience list item */}
-              <div className="flex justify-between h-48">
-                {/* left */}
-                <div className="w-1/3 flex flex-col md:gap-0 lg:gap-0">
-                  <div className="bg-white p-3 mt-36 md:mt-0 lg:mt-0 font-semibold rounded-b-lg rounded-s-lg">Bank Clerk/Teller</div>
-                  <div className="p-3 text-sm italic">Utilized data analysis techniques, leveraged data insights and implemented data-driven solutions.</div>
-                  <div className="p-3 text-red-400 text-sm font-semibold">2024-present</div>
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
-                </div>
                 {/* center */}
                 <div className="w-1/6 flex justify-center">
                   {/* line */}
@@ -218,8 +197,124 @@ const Aboutpage = () => {
                 </div>
               </div>
 
+              {/* experience list item */}
+              <div className="flex justify-between h-48">
+                {/* left */}
+                <div className="w-1/3 ">
+                </div>
+                {/* center */}
+                <div className="w-1/6 flex justify-center">
+                  {/* line */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* circle */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
+                    </div>
+                  </div>
+                </div>
+                {/* right */}
+                <div className="w-1/3">
+                  <div className="bg-white p-3 mt-36 md:mt-0 lg:mt-0 font-semibold rounded-b-lg rounded-s-lg">Bank Clerk/Teller</div>
+                  <div className="p-3 text-sm italic">Utilized data analysis techniques, leveraged data insights and implemented data-driven solutions.</div>
+                  <div className="p-3 text-red-400 text-sm font-semibold">2024-present</div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
+                </div>
+              </div>
+
+            </motion.div>
+
+
+            {/* small screen */}
+            {/* experience lists */}
+            <motion.div initial={{ x: "-300px" }} animate={isExperienceInView ? { x: 0 } : {}} className="block md:hidden lg:hidden xl:hidden">
+
+              {/* experience list item */}
+              <div className="flex justify-between h-56">
+                {/* left */}
+                <div className="w-1/6 flex justify-center">
+                  {/* line */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* circle */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
+                    </div>
+                    {/* <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
+                    </div> */}
+                    {/* <svg className="absolute -left-4 -top-3" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#f87171"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" /></svg> */}
+                  </div>
+                </div>
+                {/* right */}
+                <div className="w-5/6">
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg w-3/4">Library Champion Volunteer</div>
+                  <div className="p-2 text-sm italic">Provided library resources, built community connections, supported integration by offering advice and tips.</div>
+                  <div className="p-2 text-red-400 text-sm font-semibold"> Sep 2023 - Dec 2023
+                  </div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">NewToBC</div>
+                </div>
+              </div>
+
+              {/* experience list item */}
+              <div className="flex justify-between h-56">
+                {/* left */}
+                <div className="w-1/6 flex justify-center">
+                  {/* line */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* circle */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
+                    </div>
+                  </div>
+                </div>
+                {/* right */}
+                <div className="w-5/6">
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg w-3/4">Financial Analyst</div>
+                  <div className="p-2 text-sm italic">
+                    Analyzed financial products, delivered financial advice, developed and maintained databases.
+                  </div>
+                  <div className="p-2 text-red-400 text-sm font-semibold">Jul 2016 - Jul 2021</div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
+                </div>
+              </div>
+
+              {/* experience list item */}
+              <div className="flex justify-between h-56">
+                {/* left */}
+                <div className="w-1/6 flex justify-center">
+                  {/* line */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* circle */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
+                    </div>
+                  </div>
+                </div>
+                {/* right */}
+                <div className="w-5/6">
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg w-3/4">Lobby Manager</div>
+                  <div className="p-2 text-sm italic">Implemented data-driven strategies, implemented data-driven strategies and spearheaded a data system.</div>
+                  <div className="p-2 text-red-400 text-sm font-semibold"> Jan 2014 - Jul 2016</div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
+                </div>
+              </div>
+
+              {/* experience list item */}
+              <div className="flex justify-between h-56">
+                {/* left */}
+                <div className="w-1/6 flex justify-center">
+                  {/* line */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* circle */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
+                    </div>
+                  </div>
+                </div>
+                {/* right */}
+                <div className="w-5/6">
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg w-3/4">Bank Clerk/Teller</div>
+                  <div className="p-2 text-sm italic">Utilized data analysis techniques, leveraged data insights and implemented data-driven solutions.</div>
+                  <div className="p-2 text-red-400 text-sm font-semibold">2024-present</div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
+                </div>
+              </div>
             </motion.div>
           </div>
+
         </div>
 
         {/* svg container */}
