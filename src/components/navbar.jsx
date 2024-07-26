@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import NavLink from './navLink';
-import { motion, stagger } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const links = [
   { url: "/", title: "Home" },
@@ -65,7 +65,7 @@ const Navbar = () => {
 
   return (
     <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl pt-4'>
-      {/*Links  */}
+      {/* Links */}
       <div className='hidden md:flex gap-4 w-1/3'>
         {links.map(link => (
           <NavLink link={link} key={link.title} />
@@ -80,7 +80,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/*social media*/}
+      {/* social media */}
       <div className='hidden md:flex gap-4 w-1/3'>
         <Link href="https://github.com/Melissa-Shao" target="_blank" rel="noopener noreferrer">
           <Image src="/github.png" alt="" width={24} height={24} />
@@ -116,11 +116,13 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-3xl z-40'>
+            className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-3xl z-50'>
             {links.map((link) => (
               <motion.div
                 variants={listItemVariants}
-                key={link.title}>
+                key={link.title}
+                className='z-50'
+              >
                 <Link href={link.url}>
                   {link.title}
                 </Link>
@@ -132,4 +134,5 @@ const Navbar = () => {
     </div>
   )
 }
+
 export default Navbar;
