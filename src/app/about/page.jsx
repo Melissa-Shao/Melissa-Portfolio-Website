@@ -180,7 +180,7 @@ const Aboutpage = () => {
                 <div className="w-1/3">
                   <div className="bg-white p-3 mt-40 md:mt-0 lg:mt-0 font-semibold rounded-b-lg rounded-s-lg">Lobby Manager</div>
                   <div className="p-3 text-sm italic">Implemented data-driven strategies, implemented data-driven strategies and spearheaded a data system.</div>
-                  <div className="p-3 text-red-400 text-sm font-semibold"> Jan 2014 - Jul 2016</div>
+                  <div className="p-3 text-red-400 text-sm font-semibold"> Jan 2014 - Jun 2016</div>
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
                 </div>
                 {/* center */}
@@ -215,7 +215,7 @@ const Aboutpage = () => {
                 <div className="w-1/3">
                   <div className="bg-white p-3 mt-36 md:mt-0 lg:mt-0 font-semibold rounded-b-lg rounded-s-lg">Bank Clerk/Teller</div>
                   <div className="p-3 text-sm italic">Utilized data analysis techniques, leveraged data insights and implemented data-driven solutions.</div>
-                  <div className="p-3 text-red-400 text-sm font-semibold">2024-present</div>
+                  <div className="p-3 text-red-400 text-sm font-semibold">Jul 2013 - Jan 2014</div>
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">China Minsheng Banking Corp.,Ltd</div>
                 </div>
               </div>
