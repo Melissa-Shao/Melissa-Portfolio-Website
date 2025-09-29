@@ -24,10 +24,10 @@ const items = [
   {
     id: 3,
     color: "from-violet-300 to-purple-300",
-    title: "ProcrastinHate App",
-    desc: "Developed an innovative application designed to help users tackle procrastination by providing tools and resources to improve their physical and mental health. Encourage users to stay focused and productive, and improve their happiness and well-being.",
-    img: "/1.png",
-    link: "https://dtc11-project.web.app",
+    title: "Wonderful World Game",
+    desc: "Utilized MVC architecture with JavaFX and the Maven framework to build a 2D magical-room adventure game. Implemented game menu, world exploration, turn-based combat, inventory, and portal for better user experience.",
+    img: "/wonderful_world.png",
+    link: "https://github.com/Melissa-Shao/WonderfulWorld",
   },
   {
     id: 4,
@@ -53,36 +53,58 @@ const Portfoliopage = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
   return (
-    <motion.div className="h-full"
+    <motion.div
+      className="h-full"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
-      transition={{ duration: 1 }}>
+      transition={{ duration: 1 }}
+    >
       <div className="h-[600vh] relative" ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-6xl md:text-8xl lg:text-8xl text-center">My Projects</div>
+        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-6xl md:text-8xl lg:text-8xl text-center">
+          My Projects
+        </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex ">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300"></div>
 
-            {items.map(item => (<div className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`} key={item.id}>
-              <div className="flex flex-col gap-8 text-white">
-                <h1 className="text-3xl font-bold md:text-4xl lg:text-4xl xl:text-5xl xl:pt-8">{item.title}</h1>
-                <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[500px] xl:h-[350px]">
-                  <Image src={item.img} alt='' fill />
+            {items.map((item) => (
+              <div
+                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
+                key={item.id}
+              >
+                <div className="flex flex-col gap-8 text-white">
+                  <h1 className="text-3xl font-bold md:text-4xl lg:text-4xl xl:text-5xl xl:pt-8">
+                    {item.title}
+                  </h1>
+                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[500px] xl:h-[350px]">
+                    <Image src={item.img} alt="" fill />
+                  </div>
+                  <p className=" w-80 md:w-96 lg:w-[500px] text-xl md:text-lg lg:text-lg xl:w-[500px]">
+                    {item.desc}
+                  </p>
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex justify-end"
+                  >
+                    <button className="p-2 text-lg md:p-4 md:text-md lg:p-4 lg:text-lg bg-white text-gray-600 font-semibold rounded m-2">
+                      See Demo
+                    </button>
+                  </Link>
                 </div>
-                <p className=" w-80 md:w-96 lg:w-[500px] text-xl md:text-lg lg:text-lg xl:w-[500px]">{item.desc}</p>
-                <Link href={item.link} target="_blank" rel="noopener noreferrer" className="flex justify-end"><button className="p-2 text-lg md:p-4 md:text-md lg:p-4 lg:text-lg bg-white text-gray-600 font-semibold rounded m-2">See Demo</button></Link>
               </div>
-            </div>
             ))}
           </motion.div>
         </div>
       </div>
 
       <div className="w-screen h-screen flex flex-col items-center justify-center text-center bg-gradient-to-t from-yellow to-purple">
-        <h1 className="text-6xl md:text-6xl lg:text-8xl">Want to contact me?</h1>
+        <h1 className="text-6xl md:text-6xl lg:text-8xl">
+          Want to contact me?
+        </h1>
         {/*  portfolio svg  */}
         <div className="relative">
-
           <motion.svg
             animate={{ rotate: 360 }}
             transition={{ duration: 8, ease: "linear", repeat: Infinity }}
@@ -101,12 +123,16 @@ const Portfoliopage = () => {
               </textPath>
             </text>
           </motion.svg>
-          <Link href="/contact" className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center">Contact Me
+          <Link
+            href="/contact"
+            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
+          >
+            Contact Me
           </Link>
         </div>
       </div>
     </motion.div>
-  )
+  );
 };
 
 export default Portfoliopage;
