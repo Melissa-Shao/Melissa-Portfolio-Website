@@ -38,7 +38,7 @@ const Aboutpage = () => {
                 years, during which I honed my skills in leadership, client
                 service and data analysis.
               </p>
-              <p>
+              <p className="pb-2">
                 I love critical thinking and solving complex problems. The
                 challenge of analyzing issues, breaking them down into
                 manageable parts, and finding innovative solutions is deeply
@@ -46,8 +46,9 @@ const Aboutpage = () => {
                 meticulous nature ensures thorough and accurate results.
               </p>
               <p>
-                Outside of academics and work, I enjoy traveling and crocheting,
-                as well as swimming and hiking to stay active and refreshed.
+                Outside of academics and work, I enjoy travelling and
+                crocheting, as well as swimming and hiking to stay active and
+                refreshed.
               </p>
             </div>
 
@@ -248,18 +249,19 @@ const Aboutpage = () => {
                 {/* left */}
                 <div className="w-1/3">
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Library Champion Volunteer
+                    Software Developer
                   </div>
                   <div className="p-3 text-sm italic">
-                    Provided library resources, built community connections,
-                    supported integration by offering advice and tips.
+                    Implemented new requirements and fixed bugs, collaborated
+                    with QA team for testing, developed Jasmine unit tests for
+                    performance.
                   </div>
                   <div className="p-3 text-red-400 text-sm font-semibold">
                     {" "}
-                    Sep 2023 - Dec 2023
+                    Dec 2024 - Aug 2025
                   </div>
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    NewToBC
+                    Wärtsilä Canada
                   </div>
                 </div>
                 {/* center */}
