@@ -31,10 +31,7 @@ const Aboutpage = () => {
             {/* biography description */}
             <div className="text-lg">
               <p className="pb-2">
-                My name is Melissa. Currently, I am a full-time student in the
-                Computer Systems Technology program at BCIT. Recently completed
-                a 9-month Co-op as a Full-Stack Developer at Wärtsilä Canada.
-                Previously, I worked in the financial field for over eight
+                My name is Melissa. I recently completed the Computer Systems Technology program at BCIT and am now pursuing opportunities in the IT field. I have hands-on experience as a Full-Stack Developer through a 9-month internship at Wärtsilä Canada. Previously, I worked in the financial field for over eight
                 years, during which I honed my skills in leadership, client
                 service and data analysis.
               </p>

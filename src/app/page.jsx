@@ -29,11 +29,11 @@ const Homepage = () => {
             <Link href="/portfolio">
               <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">View my work</button>
             </Link>
-            <a href={fileUrl} target="_blank" rel="noopener noreferrer">
+            {/* <a href={fileUrl} target="_blank" rel="noopener noreferrer">
               <button className="p-4 rounded-lg ring-1 ring-black flex flex-row justify-between items-center">
                 See My Resume
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
