@@ -8,49 +8,57 @@ const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
+    title: "Beepo AI Phone Agent",
+    desc: "Beepo is an AI-powered virtual front desk assistant that makes phone calls based on a given number and conversation goal, managing interactions with human-like responses.It analyzes context in real time to achieve the call objective.",
+    img: "/beepo.png",
+    link: "https://beepo-ai-phone-agent-api.vercel.app/",
+  },
+  {
+    id: 2,
+    color: "from-blue-300 to-violet-300",
+    title: "Gesture Flappy Bird",
+    desc: "Gesture Flappy Bird is a real-time computer vision game that uses hand gestures to control gamepads.It combines MediaPipe hand tracking and a custom PyTorch model to translate gestures into in-game actions.",
+    img: "/bird.gif",
+    link: "https://gesture-flappy-bird.netlify.app/",
+  },
+  {
+    id: 3,
+    color: "from-violet-300 to-purple-300",
+    title: "Momo Chatbot",
+    desc: "Momo Chat is an AI-powered emotional companion mobile app built with Flutter that enables users to chat with an AI assistant, track daily mood, and receive personalized insights from their conversations.",
+    img: "/momo_chat.jpg",
+    link: "https://github.com/Melissa-Shao/Momo-Chat",
+  },
+  {
+    id: 4,
+    color: "from-purple-300 to-blue-300",
     title: "SmileEstate App",
     desc: "SmileEstate is a platform designed to help people find and post properties for sale or rent, with a real-time chat feature to enhance communication efficiency between both parties.",
     img: "/smile.png",
     link: "https://smile-estate-app.onrender.com",
   },
   {
-    id: 2,
-    color: "from-blue-300 to-violet-300",
+    id: 5,
+    color: "from-blue-300 to-red-300",
     title: "Dronify App",
     desc: "Dronify is a web application that deploys autonomous drones (on-demand) to offer package delivery and roadside assistance for autonomous car owners during accidents, thereby reducing delivery time and traffic congestion.",
     img: "/dronify.png",
     link: "https://dronify-mbme.onrender.com/",
   },
   {
-    id: 3,
-    color: "from-violet-300 to-purple-300",
+    id: 6,
+    color: "from-red-300 to-purple-300",
     title: "Wonderful World Game",
     desc: "Utilized MVC architecture with JavaFX and the Maven framework to build a 2D magical-room adventure game. Implemented game menu, world exploration, turn-based combat, inventory, and portal for better user experience.",
     img: "/wonderful_world.png",
     link: "https://github.com/Melissa-Shao/WonderfulWorld",
-  },
-  {
-    id: 4,
-    color: "from-purple-300 to-red-300",
-    title: "Pikachu Game",
-    desc: "Pikachu game is a text-based single-user dungeongame that allows users to play as Pikachu and interact with other characters in the game. The game is designed to be fun and engaging for users of all ages.",
-    img: "/pikachu.png",
-    link: "https://github.com/candiceweily/1510_team_project.git",
-  },
-  {
-    id: 5,
-    color: "from-red-300 to-blue-300",
-    title: "Data Analysis Project",
-    desc: "This project involves a data analysis workflow using Kaggle API for data acquisition, followed by data management and analysis using Python, Pandas, and SQL.",
-    img: "/data.png",
-    link: "https://github.com/Melissa-Shao/data-analysis-project.git",
   },
 ];
 
 const Portfoliopage = () => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]);
 
   return (
     <motion.div
@@ -72,7 +80,7 @@ const Portfoliopage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                <div className="flex flex-col gap-8 text-white">
+                <div className="flex flex-col gap-2 text-white">
                   <h1 className="text-3xl font-bold md:text-4xl lg:text-4xl xl:text-5xl xl:pt-8">
                     {item.title}
                   </h1>
